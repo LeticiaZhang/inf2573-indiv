@@ -9,11 +9,12 @@ const { Server } = require('socket.io');
 const rooms = require('./rooms');
 const gm = require('./gm');
 
-const PORT = Number(process.env.PORT || 3000);
+let PORT = Number(process.env.PORT || 3000);
 const app = express();
 app.use(express.static(path.join(__dirname, '..', 'public')));
 // Lets the lobby show a join link that works on phones (not "localhost").
 app.get('/info', (req, res) => res.json({ urls: lanUrls(), port: PORT, gmMode: gm.mode }));
+app.get('/healthz', (req, res) => res.json({ ok: true, app: 'the-last-train' }));
 const server = http.createServer(app);
 const io = new Server(server);
 
@@ -115,6 +116,7 @@ function lanUrls() {
 }
 
 server.listen(PORT, () => {
+  PORT = server.address().port;
   console.log(`\nAlternate Universe running (GM mode: ${gm.mode}${gm.mode === 'live' ? `, model: ${process.env.GM_MODEL || 'claude-sonnet-5'}` : ''})`);
   if (gm.mode === 'live' && !process.env.ANTHROPIC_API_KEY) {
     console.warn('  Warning: GM_MODE=live but ANTHROPIC_API_KEY is not set. Rounds will fall back to mock.');

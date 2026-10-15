@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101f21"><title>The Last Train · Alternate Universe</title><style>:root{color-scheme:dark;--bg:#101f21;--panel:#192b2d;--border:#3c4a47;--cream:#f4ead4;--muted:#adb9b0;--gold:#e8b76a;--green:#a3c4a4;--red:#e6a18c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}a{color:inherit}button{min-height:48px;padding:12px 20px;border:1px solid var(--border);border-radius:7px;background:transparent;color:var(--cream);cursor:pointer;transition:background .15s}button:hover{background:#2a3d3c}button:disabled{opacity:.45;cursor:default}button.primary{background:var(--gold);border-color:var(--gold);color:#172425;font-weight:700}button.primary:hover{background:#f4ca88}button.selected{border-color:var(--gold);background:#354037;color:var(--gold)}button.small{padding:8px 13px;font-size:14px}button.full{width:100%}input,select{border:1px solid #64736a;background:#101f21;border-radius:6px;color:var(--cream);min-height:48px;padding:11px 14px;width:100%}input:focus,select:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}label{display:block;font-size:14px;color:var(--muted);margin:14px 0 6px}h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.06}h1{font-size:clamp(60px,6.4vw,88px);letter-spacing:-4px;margin-bottom:26px}h2{font-size:42px;letter-spacing:-1px;margin-bottom:18px}h3{font-size:19px;margin-bottom:10px}p{color:var(--muted)}.masthead{height:100px;margin:auto;max-width:1320px;padding:0 44px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);gap:20px}.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font:28px Georgia}.brand span{font:10px Arial;letter-spacing:2px;max-width:90px;line-height:1.5}.edition,.eyebrow{font-size:11px;letter-spacing:2.6px;font-weight:700}.eyebrow{color:var(--gold);margin-bottom:22px}.edition{color:var(--muted)}#connection{font-size:12px;color:var(--green)}main{max-width:1200px;margin:auto;padding:54px 32px 70px;min-height:75vh}.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:68px;align-items:center}.hero p.lede{font-size:18px;line-height:1.7;max-width:440px}.hero em{color:var(--gold);font-style:italic}.tags{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;letter-spacing:1px;margin:26px 0}.ticket{margin-top:38px;border-top:1px solid var(--border);padding-top:25px}.ticket h3{font-family:Georgia;font-size:25px;font-weight:400}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.actions>*{flex:1}.secondary-links{display:flex;justify-content:space-between;font-size:13px;margin-top:18px;gap:20px}.secondary-links button{padding:0;border:0;min-height:44px;text-decoration:underline;color:var(--muted)}.art{position:relative;border:1px solid #536459;background:#213538;border-radius:180px 180px 8px 8px;overflow:hidden;min-height:540px}.art svg{display:block;width:100%;height:500px}.art-caption{text-align:center;font-size:11px;letter-spacing:3px;padding:15px;border-top:1px solid #536459;color:var(--gold)}.how{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:65px;border-top:1px solid var(--border);padding-top:30px}.how span{color:var(--gold);font-size:12px}.how h3{font-size:16px;margin:8px 0}.how p{font-size:13px}.game{max-width:760px;margin:auto}.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:24px;font-size:12px;color:var(--muted)}.topline strong{color:var(--gold);letter-spacing:2px}.resource-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}.resource{border:1px solid var(--border);padding:15px;border-radius:8px;background:var(--panel)}.resource strong{font-size:22px;color:var(--gold)}.resource small{display:block;color:var(--muted);font-size:10px;line-height:1.4;margin:5px 0}.meter{display:flex;gap:3px;margin-top:10px}.meter i{height:4px;background:#40514c;flex:1}.meter i.filled{background:var(--gold)}.card{padding:24px;border:1px solid var(--border);border-radius:10px;background:var(--panel);margin:18px 0}.card.secret{background:#263b36;border-color:#58715c}.secret summary{cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:space-between;font-weight:700;gap:12px}.secret summary small{font-weight:400;font-size:11px;color:var(--green)}.secret p{color:#d4ddca;margin:16px 0 0}.secret .wish{font-size:14px;border-top:1px solid #526555;padding-top:14px}.muted{color:var(--muted)}.small-text{font-size:13px}.chapter-nav{display:flex;gap:8px;margin:25px 0}.chapter-nav span{height:3px;background:var(--border);flex:1}.chapter-nav span.active{background:var(--gold)}.scene{font-size:18px;color:var(--cream);line-height:1.65}.npc{font-size:13px;font-style:italic}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{padding:7px 12px;border-radius:30px;background:#263b38;color:#cad6c9;font-size:13px}.chip .dot{color:var(--gold)}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.option{text-align:left;display:block;padding:20px;min-width:0}.option strong{display:block;font-family:Georgia;font-size:24px;font-weight:400;color:var(--cream)}.option span{display:block;margin-top:8px;font-size:13px;color:var(--muted)}.track-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.track-grid button{padding:16px 8px}.track-grid small{display:block;font-size:11px;margin-top:6px}.toggle{display:flex;align-items:center;gap:12px;padding:12px 0;color:var(--cream)}.toggle input{width:21px;min-height:21px;accent-color:var(--gold)}.status-note{border-left:2px solid var(--gold);padding:4px 0 4px 16px;color:var(--muted);font-size:14px;margin:22px 0}.code{font:64px Georgia;letter-spacing:14px;color:var(--gold);margin:20px 0}.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}.row:last-child{border:0}.cast-question{margin-bottom:25px}.cast-question h3{font-size:17px}.cast-question .chips button{min-height:44px;font-size:14px;padding:9px 15px}.die{height:76px;width:76px;display:grid;place-items:center;background:var(--cream);color:var(--bg);font:44px Georgia;border-radius:12px;margin:18px auto;transform:rotate(-5deg)}.reveal{text-align:center}.reveal h2{margin-bottom:10px}.big-number{font:64px Georgia;color:var(--gold)}.success{color:var(--green)}.ledger{width:100%;border-collapse:collapse;font-size:13px}.ledger th,.ledger td{text-align:right;padding:10px 6px;border-bottom:1px solid var(--border)}.ledger th:first-child,.ledger td:first-child{text-align:left}.ledger tbody tr:last-child{color:var(--gold);font-weight:700}.ending{padding:20px 0;text-align:center}.ending .seal{font-size:58px;color:var(--gold)}.bot-note{border-left:2px solid #779c8d;padding:10px 16px;margin:10px 0;font-size:14px}.bot-note strong{display:block;font-size:11px;color:var(--green);margin-bottom:5px}.bot-note p{margin:0}.error{color:var(--red)}#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);max-width:90%;width:max-content;background:var(--cream);color:var(--bg);padding:16px 24px;border-radius:8px;box-shadow:0 6px 25px #0007;z-index:10}footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:10px;letter-spacing:2px;color:var(--muted)}footer span{margin:0 16px;color:var(--gold)}details.history summary{min-height:44px;cursor:pointer}.home-name{max-width:100%}#join-area[hidden]{display:none}.art .star{fill:#e8b76a} @media(max-width:760px){.masthead{height:76px;padding:0 20px}.edition{display:none}main{padding:32px 20px 50px}.hero{grid-template-columns:1fr;gap:30px}.hero h1{font-size:68px;letter-spacing:-3px}.art{min-height:360px;max-width:450px;width:100%;margin:0 auto;border-radius:160px 160px 8px 8px}.art svg{height:330px}.how{grid-template-columns:1fr 1fr;margin-top:36px;gap:20px}.ticket{margin-top:25px}.card{padding:20px}.resource-bar{gap:7px}.resource{padding:11px}.resource strong{font-size:20px}.resource small{min-height:28px}.options{gap:9px}.option{padding:15px}.option strong{font-size:23px}h2{font-size:36px}.ledger{font-size:11px}.ledger td,.ledger th{padding:9px 3px}.track-grid{gap:6px}.topline{flex-wrap:wrap}.game .actions{flex-direction:column}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head>
+<body><header class="masthead"><a class="brand" href="">AU<span>ALTERNATE UNIVERSE</span></a><span class="edition">A SMALL ADVENTURE, TOGETHER</span><span id="connection" role="status">Connecting…</span></header><main id="app"></main><div id="toast" role="status" hidden></div><footer>THE LAST TRAIN <span>✦</span> Offline solo demo · No installation · No network rooms</footer><script>
+
+const browserCrypto={randomInt(min,max){
+ const range=max-min,limit=Math.floor(4294967296/range)*range,value=new Uint32Array(1);
+ do { crypto.getRandomValues(value); } while(value[0]>=limit);
+ return min+(value[0]%range);
+}};
+const offlineModules={"/config/heist/content.js":function(module,exports,require){
+const questions = ['Who gets things moving?', 'Who notices what others miss?', 'Who keeps the group together?'];
+const roles = [
+  {name:'Runner', track:'Supply', question:0, wish:'Successfully contribute Supply in at least one chapter.', secret:'Someone put your parcel on this train. You want to take it with you.'},
+  {name:'Mechanic', track:'Supply', question:1, wish:'Choose Service in chapter 3.', secret:'You recognise this old train and know what it needs to run.'},
+  {name:'Mediator', track:'Care', question:2, wish:'Help the crew reach the Care threshold in any chapter.', secret:'You promised the passengers that this rescue would not become a blame game.'},
+  {name:'Scout', track:'Cover', question:1, wish:'Choose Tunnel in chapter 2.', secret:'You once worked as a guide in the old tunnel.'},
+  {name:'Quartermaster', track:'Supply', question:0, wish:'Finish with at least 3 Fuel.', secret:'You like a reserve. “Just enough” never feels like enough.'},
+  {name:'Chronicler', track:'Care', question:2, wish:'Finish with at least 3 Hope.', secret:'You want to record how everyone helped, not just the escape route.'},
+];
+const chapters = [
+  {title:'A Dark Platform', subtitle:'Wake the station.', scene:'The platform is dark. A vending machine offers an emergency battery. A hand crank could wake the station too, but the crew is exhausted.', npc:'Vending machine · “Emergency power. Please choose carefully.”', options:[{id:'Battery',text:'Take the emergency battery',hint:'Power for the train. A less quiet departure.'},{id:'Crank',text:'Turn the hand crank together',hint:'Light for the station. A tired crew.'}], default:'Battery', clues:[
+    'The emergency battery contains two fuel units. Removing it will sound an alarm once.',
+    'The crank is quiet, but everyone will be tired. It will not add fuel to the train.',
+    'A lit station can calm the crew next chapter: choosing Signal will restore two Hope rather than one.',
+    'One quiet route opens behind the platform.',
+    'Check the fuel reserve at the top of your screen. Spare fuel matters at departure.',
+    'A lit station will be easier for waiting passengers to find.'
+  ]},
+  {title:'The Fork', subtitle:'Find a way through.', scene:'The track divides. The old tunnel is quiet but its ventilation is unreliable. The signal route is visible to the wardens but may reassure everyone.', npc:'Announcer · “Two tracks. One last departure.”', options:[{id:'Tunnel',text:'Take the old tunnel',hint:'A quieter route that uses fuel.'},{id:'Signal',text:'Follow the signal route',hint:'Reassurance for the crew, in sight of the wardens.'}], default:'Tunnel', clues:[
+    'The tunnel consumes one fuel unit and lowers Alert by one.',
+    'If you removed the battery, tunnel ventilation will fail and cost one Hope.',
+    'The signal route adds one Alert and one Hope; if you lit the station, it adds one extra Hope.',
+    'The tunnel consumes one fuel unit and lowers Alert by one.',
+    'Check your fuel. The tunnel uses one unit.',
+    'Remember whether you lit the station. Its lights can answer your signal.'
+  ]},
+  {title:'Departure', subtitle:'Everyone on board.', scene:'The wardens are entering the station. You can launch immediately, or stop for one final service check. Choose what kind of departure you are willing to risk.', npc:'Attendant · “No one gets left behind.”', options:[{id:'Launch',text:'Launch immediately',hint:'A rush of hope, with the wardens close behind.'},{id:'Service',text:'Make one final service check',hint:'A careful, quieter start.'}], default:'Service', clues:[
+    'Launching now gives the crew one Hope but raises Alert by one.',
+    'Launch needs at least 3 Fuel; Service needs only 2. This chapter’s personal actions count before departure is evaluated.',
+    'A clean escape needs Hope at least 2 and Alert at most 4. Fuel alone cannot fix a panicked crew.',
+    'For a clean escape, Alert must be at most 4.',
+    'Launch needs 3 Fuel. Service needs 2 Fuel. Personal actions count first.',
+    'For a clean escape, Hope must be at least 2.'
+  ]}
+];
+const outcomes = {
+  Battery:'The battery clicks free. The train hums awake; an alarm rings across the platform.',
+  Crank:'Together, you turn the crank. Warm light fills the station, but your arms ache.',
+  Tunnel:'The carriage slips into the old tunnel, out of sight of the wardens.',
+  Signal:'The signal lights mark a way forward. Your crew lifts their heads.',
+  Launch:'The crew braces for departure. The wardens hear the engine surge.',
+  Service:'One final check settles the engine. You are ready for a quieter departure.'
+};
+module.exports = {questions, roles, chapters, outcomes};
+
+},
+"/server/heist/rules.js":function(module,exports,require){
+const {roles, chapters, outcomes} = require('../../config/heist/content');
+const tracks = ['Supply','Care','Cover'];
+function validAction(a, focus) {
+  return a && tracks.includes(a.track) && ['Safe','Bold'].includes(a.method) && typeof a.focus === 'boolean' && (!a.focus || (a.method === 'Bold' && focus === 1));
+}
+function resolveAction(action, role, roll) {
+  if (!validAction(action,1)) throw new Error('Invalid action');
+  const modifier = action.method === 'Bold' ? Number(role.track === action.track) + (action.focus ? 2 : 0) : 0;
+  if (action.method === 'Bold' && (!Number.isInteger(roll) || roll < 1 || roll > 6)) throw new Error('Invalid die');
+  const success = action.method === 'Safe' || roll + modifier >= 4;
+  return {...action, roll:action.method === 'Bold' ? roll : null, modifier, threshold:4, success, contribution:success ? (action.method === 'Safe' ? 1 : 2) : 0, alert:success ? 0 : 1};
+}
+function resolveTracks(actions, q) {
+  const totals = Object.fromEntries(tracks.map(t=>[t, actions.filter(a=>a.track === t).reduce((s,a)=>s+a.contribution,0)]));
+  return {totals, delta:{Fuel:Number(totals.Supply>=q),Hope:Number(totals.Care>=q),Alert:-Number(totals.Cover>=q)}};
+}
+function resolveVote(votes, seats, captain, chapter) {
+  const options = chapters[chapter].options.map(o=>o.id);
+  const counts = Object.fromEntries(options.map(o=>[o,seats.filter(id=>votes[id]===o).length]));
+  const max = Math.max(...Object.values(counts));
+  if (!max) return chapters[chapter].default;
+  const tied = options.filter(o=>counts[o]===max);
+  if (tied.includes(votes[captain])) return votes[captain];
+  return votes[seats.find(id=>tied.includes(votes[id]))];
+}
+function assignRoles(seats, ballots) {
+  const remaining = [...seats], assigned = {};
+  roles.slice(0,seats.length).forEach((r, ri)=> {
+    const count = id=>Object.values(ballots).filter(b=>b[r.question]===id).length;
+    const best = remaining.reduce((a,b)=>count(b)>count(a) ? b : a);
+    assigned[best] = ri; remaining.splice(remaining.indexOf(best),1);
+  });
+  return assigned;
+}
+function applyChapterEffects(before, flags, choice, actions, q) {
+  const nextFlags = {...flags};
+  const track = resolveTracks(actions,q);
+  const lines = [{label:'Bold failures',delta:{Alert:actions.reduce((s,a)=>s+a.alert,0)}},
+    ...tracks.map((t,i)=>({label:`${t} ${track.totals[t]}/${q}${track.totals[t]>=q?' · threshold reached':''}`,delta:{[['Fuel','Hope','Alert'][i]]:Object.values(track.delta)[i]}}))];
+  const effects = {Battery:{Fuel:2,Alert:1},Crank:{Hope:-1,Alert:-1},Tunnel:{Fuel:-1,Alert:-1},Signal:{Hope:1,Alert:1},Launch:{Hope:1,Alert:1},Service:{Alert:-1}};
+  if (!effects[choice]) throw new Error('Unknown choice');
+  lines.push({label:`Because you chose ${choice}`,delta:effects[choice]});
+  let text = outcomes[choice];
+  if (choice==='Battery') nextFlags.batteryTaken=true;
+  if (choice==='Crank') nextFlags.stationLit=true;
+  if (choice==='Tunnel' || choice==='Signal') nextFlags.route=choice.toLowerCase();
+  if (choice==='Tunnel' && flags.batteryTaken) { lines.push({label:'Battery removed → ventilation failed',delta:{Hope:-1}}); text+=' The dead ventilation fans unsettle the passengers. Hope −1.'; }
+  if (choice==='Signal' && flags.stationLit) { lines.push({label:'Lit station → reassuring signal',delta:{Hope:1}}); text+=' The platform lights answer your signal. Extra Hope +1.'; }
+  const resources = Object.fromEntries(Object.entries(before).map(([k,v])=>[k,Math.max(0,Math.min(6,v+lines.reduce((s,l)=>s+(l.delta[k]||0),0)))]));
+  return {before:{...before},resources,flags:nextFlags,choice,lines,totals:track.totals,text};
+}
+function computeEnding(r,choice) {
+  const threshold = choice==='Launch'?3:2;
+  if (r.Fuel<threshold) return {title:'Train Stalled',threshold,text:'The engine falls quiet. You all take shelter in the underground waiting room. The shared mission is unfinished. No one is left behind.'};
+  const reasons=[];
+  if (r.Hope<2) reasons.push('The crew leaves exhausted and shaken.');
+  if (r.Alert>4) reasons.push('The wardens are close behind.');
+  return {title:reasons.length?'Costly Escape':'Clean Escape',threshold,text:reasons.length?`Everyone gets away. ${reasons.join(' ')}`:'Everyone is aboard. The city lights fade behind you. You found a way out together.'};
+}
+function computeWish(role, pid, history, r) {
+  return [()=>history.some(h=>h.actions.some(a=>a.playerId===pid&&a.track==='Supply'&&a.success)),
+    ()=>history.some(h=>h.choice==='Service'),()=>history.some(h=>h.totals.Care>=h.q),
+    ()=>history.some(h=>h.choice==='Tunnel'),()=>r.Fuel>=3,()=>r.Hope>=3][role]();
+}
+module.exports={tracks,validAction,resolveAction,resolveTracks,resolveVote,assignRoles,applyChapterEffects,computeEnding,computeWish};
+
+},
+"/server/heist/engine.js":function(module,exports,require){
+// All heist mutations are called through rooms.js. Time and dice are injectable.
+const crypto = require('crypto');
+const C = require('../../config/heist/content');
+const R = require('./rules');
+const fail = message=>{throw new Error(message);};
+function create(room, {now=Date.now, die=()=>crypto.randomInt(1,7)}={}) {
+  room.mode='heist'; room.phase='heist';
+  room.heist={phase:'lobby',phaseId:0,startedAt:now(),deadlineAt:null,now,die,chapterIndex:0,
+    resources:{Fuel:2,Hope:2,Alert:0},flags:{},roles:{},focus:{},ballots:{},ready:{},drafts:{},votes:{},history:[],visibility:{},swapped:{},swaps:[],events:[],revealIndex:0,pausedAt:null};
+}
+function phase(room, name, duration) {
+  const h=room.heist; h.phase=name; h.phaseId++; h.startedAt=h.now(); h.deadlineAt=duration ? h.now()+duration : null; h.ready={};
+}
+function active(room) {return room.players.filter(p=>p.connected);}
+function enough(room) {return active(room).length>=3;}
+function allReady(room) {return room.players.every(p=>room.heist.ready[p.id]);}
+function enterBriefing(room) {
+  const h=room.heist;
+  if(!enough(room)) return phase(room,'waiting');
+  h.drafts={}; h.votes={}; h.locked=null; h.revealIndex=0; phase(room,'briefing',40000);
+}
+function cast(room) {
+  const h=room.heist; h.roles=R.assignRoles(h.seats,h.ballots); phase(room,'roles',60000);
+}
+function lock(room) {
+  const h=room.heist;
+  if(h.locked) return;
+  h.choice=R.resolveVote(h.votes,h.seats,h.seats[h.chapterIndex%h.seats.length],h.chapterIndex);
+  h.locked=h.seats.map(id=> {
+    const a=h.drafts[id]||{track:'Cover',method:'Safe',focus:false,auto:true};
+    if(a.focus) h.focus[id]=0;
+    return {playerId:id,...R.resolveAction(a,C.roles[h.roles[id]],a.method==='Bold'?h.die():null)};
+  });
+  phase(room,'resolve'); h.revealIndex=1;
+}
+function resolveChapter(room) {
+  const h=room.heist, chapterId=h.chapterIndex;
+  const existing=h.history.find(x=>x.chapterId===chapterId);
+  if(existing) return existing;
+  const result={...R.applyChapterEffects(h.resources,h.flags,h.choice,h.locked,h.q),chapterId,q:h.q,actions:h.locked};
+  h.resources=result.resources; h.flags=result.flags; h.history.push(result);
+  for (const a of h.locked) h.events.push({type:'action_revealed',playerId:a.playerId,at:h.now(),chapter:chapterId+1,values:{contribution:a.contribution,roll:a.roll,modifier:a.modifier,focusUsed:Number(a.focus),auto:Number(!!a.auto)}});
+  h.events.push({type:'chapter_settled',at:h.now(),chapter:chapterId+1,values:{...h.resources}});
+  phase(room,chapterId===2?'ending':'chapter_end');
+  return result;
+}
+function bots(room) {
+  if(!room.demo) return;
+  const h=room.heist;
+  room.players.filter(p=>p.bot).forEach((p,i)=> {
+    if(h.phase==='casting') h.ballots[p.id]={0:h.seats[0],1:h.seats[1],2:h.seats[2]};
+    if(['roles','briefing','planning'].includes(h.phase)) h.ready[p.id]=true;
+    if(['planning','decision'].includes(h.phase)) {
+      h.drafts[p.id]={track:['Supply','Care','Cover'][i],method:'Safe',focus:false};
+      // Fixed suggestions, never analysis of the human player's input.
+      if(h.phase==='decision') h.votes[p.id]=[['Battery','Crank','Battery'],['Tunnel','Signal','Tunnel'],['Service','Launch','Service']][h.chapterIndex][i];
+    }
+  });
+  h.swaps.filter(s=>room.players.find(p=>p.id===s.to)?.bot).forEach(s=>acceptSwap(room,s.to,s.from));
+}
+function tick(room) {
+  const h=room.heist; if(!h) return false;
+  const before=JSON.stringify([h.phaseId,h.swaps,h.pausedAt,room.hostId]);
+  const now=h.now();
+  if(!room.players.some(p=>p.connected&&!p.bot)) {
+    if(h.pausedAt===null) h.pausedAt=now;
+    return JSON.stringify([h.phaseId,h.swaps,h.pausedAt,room.hostId])!==before;
+  }
+  if(h.pausedAt!==null) {
+    const dt=now-h.pausedAt; h.startedAt+=dt; if(h.deadlineAt!==null) h.deadlineAt+=dt;
+    h.swaps.forEach(s=>s.expiresAt+=dt); h.pausedAt=null;
+  }
+  const host=room.players.find(p=>p.id===room.hostId);
+  if(!host?.connected && now-(host?.disconnectedAt??now)>=30000) room.hostId=active(room).find(p=>!p.bot)?.id||room.hostId;
+  h.swaps=h.swaps.filter(s=>s.expiresAt>now);
+  bots(room);
+  if(h.phase==='roles' && allReady(room) && h.swaps.length===0) enterBriefing(room);
+  else if(h.phase==='briefing' && allReady(room) && now-h.startedAt>=10000) phase(room,'planning',90000);
+  else if(h.phase==='planning' && allReady(room)) phase(room,'decision',room.demo?8000:20000);
+  else if(h.phase==='waiting' && enough(room)) enterBriefing(room);
+  else if(h.deadlineAt!==null && now>=h.deadlineAt) {
+    if(h.phase==='casting') cast(room);
+    else if(h.phase==='roles') {h.swaps=[];enterBriefing(room);}
+    else if(h.phase==='briefing') phase(room,'planning',90000);
+    else if(h.phase==='planning') phase(room,'decision',room.demo?8000:20000);
+    else if(h.phase==='decision') lock(room);
+  }
+  bots(room);
+  return JSON.stringify([h.phaseId,h.swaps,h.pausedAt,room.hostId])!==before;
+}
+function acceptSwap(room,pid,from) {
+  const h=room.heist, s=h.swaps.find(s=>s.from===from&&s.to===pid&&s.expiresAt>h.now());
+  if(!s) fail('That invitation has expired.');
+  [h.roles[pid],h.roles[from]]=[h.roles[from],h.roles[pid]];
+  h.swapped[pid]=h.swapped[from]=true; h.ready[pid]=h.ready[from]=false;
+  h.swaps=h.swaps.filter(x=>x!==s);
+}
+function act(room,pid,event,data={}) {
+  const h=room.heist;
+  if(!h||room.mode!=='heist') fail('Not a Last Train room.');
+  if(!room.players.some(p=>p.id===pid&&p.connected)) fail('Reconnect first.');
+  tick(room);
+  if(data.phaseId!==h.phaseId) fail('The scene changed. Try again.');
+  const requirePhase=(...names)=>{if(!names.includes(h.phase)||h.pausedAt!==null) fail('Not available in this phase.');};
+  const host=()=>{if(room.hostId!==pid)fail('Only the host can do that.');};
+  if(event==='heistStart') {
+    host();requirePhase('lobby');if(room.players.length<3||!enough(room)) fail('Gather at least 3 connected players.');
+    h.seats=room.players.map(p=>p.id);h.initialPlayerCount=h.seats.length;h.q=Math.ceil(h.seats.length/2);
+    h.focus=Object.fromEntries(h.seats.map(id=>[id,1]));phase(room,'casting',room.demo?12000:45000);
+  } else if(event==='heistCastVote') {
+    requirePhase('casting'); if(![0,1,2].includes(data.question)||!h.seats.includes(data.playerId)) fail('Choose a player for this question.');
+    (h.ballots[pid]||={})[data.question]=data.playerId;
+  } else if(event==='heistSwapRequest') {
+    requirePhase('roles'); const to=data.playerId;
+    if(!h.seats.includes(to)||to===pid||h.swapped[pid]||h.swapped[to]||h.swaps.some(s=>[s.from,s.to].some(id=>id===pid||id===to))) fail('That player is unavailable for a swap.');
+    h.swaps.push({from:pid,to,expiresAt:h.now()+10000}); h.ready[pid]=h.ready[to]=false;
+  } else if(event==='heistSwapAccept') {
+    requirePhase('roles');acceptSwap(room,pid,data.playerId);
+  } else if(event==='heistReady') {
+    requirePhase('roles','briefing','planning');h.ready[pid]=true;
+  } else if(event==='heistSetAction') {
+    requirePhase('planning','decision');
+    const a={track:data.track,method:data.method,focus:data.focus};
+    if(!R.validAction(a,h.focus[pid])) fail('Choose a valid action. Focus is for Bold actions, once per game.');
+    h.drafts[pid]=a;
+  } else if(event==='heistVote') {
+    requirePhase('decision'); if(!C.chapters[h.chapterIndex].options.some(o=>o.id===data.choice)) fail('Choose one of the two routes.');h.votes[pid]=data.choice;
+  } else if(event==='heistAdvance') {
+    host();requirePhase('resolve','chapter_end');
+    if(h.phase==='resolve') {
+      if(h.now()-h.startedAt<4000) fail('Give this reveal 4 seconds.');
+      if(h.revealIndex<=h.seats.length) {h.revealIndex++; h.phaseId++; h.startedAt=h.now();}
+      else resolveChapter(room);
+    } else {h.chapterIndex++;enterBriefing(room);}
+  } else if(event==='heistEndEarly') {
+    host();requirePhase('waiting');phase(room,'ended');
+  } else if(event==='heistRevealWish') {
+    requirePhase('ending');h.visibility[pid]=true;
+  } else fail('Unknown action.');
+  tick(room);
+}
+function view(room,pid) {
+  const h=room.heist, role=C.roles[h.roles[pid]], chapter=C.chapters[h.chapterIndex];
+  const settled=['chapter_end','ending'].includes(h.phase);
+  const shown=h.phase==='resolve'?h.locked.slice(0,Math.min(h.revealIndex,h.seats.length)):[];
+  return {mode:'heist',code:room.code,you:pid,hostId:room.hostId,demo:!!room.demo,phase:h.phase,phaseId:h.phaseId,serverNow:h.now(),deadlineAt:h.deadlineAt,startedAt:h.startedAt,paused:h.pausedAt!==null,
+    players:room.players.map(p=>({id:p.id,name:p.name,connected:p.connected,bot:!!p.bot,role:C.roles[h.roles[p.id]]?.name,track:C.roles[h.roles[p.id]]?.track})),
+    chapterIndex:h.chapterIndex,q:h.q,resources:h.resources,flags:h.flags,
+    captainId:h.seats?.[h.chapterIndex%h.seats.length],questions:C.questions,ballot:h.ballots[pid]||{},
+    role:role?{...role,clue:chapter.clues[h.roles[pid]]}:null,focus:h.focus[pid],draft:h.drafts[pid]||null,vote:h.votes[pid]||null,ready:!!h.ready[pid],
+    canSwap:!h.swapped[pid],swaps:h.swaps.filter(s=>s.from===pid||s.to===pid),
+    chapter:{title:chapter.title,subtitle:chapter.subtitle,scene:chapter.scene,npc:chapter.npc,options:chapter.options},
+    reveals:shown,showTotals:h.phase==='resolve'&&h.revealIndex>h.seats.length,
+    totals:h.phase==='resolve'&&h.revealIndex>h.seats.length?R.resolveTracks(h.locked,h.q).totals:null,
+    history:h.history.map(({actions,...rest})=>rest),bill:settled?h.history.at(-1):null,
+    ending:h.phase==='ending'?R.computeEnding(h.resources,h.choice):null,
+    wish:h.phase==='ending'?{text:role.wish,achieved:R.computeWish(h.roles[pid],pid,h.history,h.resources),public:!!h.visibility[pid]}:null,
+    researchEvents:h.phase==='ending'?exportEvents(room):[],
+    publicWishes:h.phase==='ending'?h.seats.filter(id=>h.visibility[id]).map(id=>({playerId:id,text:C.roles[h.roles[id]].wish,achieved:R.computeWish(h.roles[id],id,h.history,h.resources)})):[],
+    memories:h.phase==='ending'?h.history.map(x=>({clue:C.chapters[x.chapterId].clues[h.roles[pid]],action:x.actions.find(a=>a.playerId===pid),totals:x.totals,q:x.q})):[],
+    botClues:room.demo&&['planning','decision'].includes(h.phase)?room.players.filter(p=>p.bot).map(p=>({playerId:p.id,text:C.chapters[h.chapterIndex].clues[h.roles[p.id]]})):[]};
+}
+function setConnected(room,pid,connected) {
+  const p=room.players.find(p=>p.id===pid);if(!p)return;
+  p.connected=connected;if(!connected)p.disconnectedAt=room.heist.now();tick(room);
+}
+function exportEvents(room) {return room.heist.events.map(e=>({...e}));}
+module.exports={create,act,tick,view,setConnected,resolveChapter,exportEvents};
+
+}};
+const moduleCache={};
+function loadModule(id){
+ if(id==='crypto')return browserCrypto;
+ if(moduleCache[id])return moduleCache[id].exports;
+ const module={exports:{}};moduleCache[id]=module;
+ offlineModules[id](module,module.exports,function(request){
+  if(request==='crypto')return browserCrypto;
+  const parts=(id.slice(0,id.lastIndexOf('/')+1)+request).split('/'),out=[];
+  for(const p of parts){if(p==='..')out.pop();else if(p&&p!=='.')out.push(p);}
+  let target='/'+out.join('/');if(!target.endsWith('.js'))target+='.js';return loadModule(target);
+ });return module.exports;
+}
+// Browser-only demo transport. It uses the very same rules and engine as multiplayer.
+// All state is local to this browser; this is deliberately NOT a network room.
+(function () {
+  const engine = loadModule('/server/heist/engine.js');
+  const STORAGE = 'last-train-offline-room-v1';
+  const die = () => browserCrypto.randomInt(1, 7);
+  window.LAST_TRAIN_OFFLINE = true;
+  window.io = function () {
+    let room = null;
+    const listeners = new Map();
+    const fire = (event, payload) => (listeners.get(event) || []).forEach(fn => fn(payload));
+    function save() {
+      try { sessionStorage.setItem(STORAGE, JSON.stringify({version:1, savedAt:Date.now(), room})); } catch { /* Some file:// browsers deny storage. Playing still works. */ }
+    }
+    function broadcast() {
+      if (!room) return;
+      save();
+      fire('state', engine.view(room, 'p1'));
+    }
+    function restore() {
+      let saved;
+      try { saved = JSON.parse(sessionStorage.getItem(STORAGE)); } catch { return false; }
+      if (!saved || saved.version !== 1 || !saved.room?.heist) return false;
+      room = saved.room;
+      const h = room.heist, elapsed = Math.max(0, Date.now() - saved.savedAt);
+      h.now = Date.now; h.die = die;
+      h.startedAt += elapsed;
+      if (h.deadlineAt !== null) h.deadlineAt += elapsed;
+      h.swaps.forEach(s => s.expiresAt += elapsed);
+      return true;
+    }
+    const transport = {
+      on(event, fn) { if (!listeners.has(event)) listeners.set(event, []); listeners.get(event).push(fn); return transport; },
+      emit(event, data = {}, ack = () => {}) {
+        try {
+          if (event === 'create') {
+            if (!data.demo) throw new Error('This file is a solo demo. Use the multiplayer server for a shared room.');
+            const name = String(data.name || '').trim().slice(0,20);
+            if (!name) throw new Error('Please enter a name.');
+            room = {code:'SOLO',hostId:'p1',demo:true,players:[name,'Milo · BOT','June · BOT','Kit · BOT'].map((name,i)=>({id:`p${i+1}`,name,connected:true,bot:i>0}))};
+            engine.create(room, {die});
+            fire('joined', {code:'SOLO',token:'local-demo',playerId:'p1',name});
+          } else if (event === 'resume') {
+            if (!restore()) throw new Error('No saved demo. Start a new journey.');
+          } else {
+            if (!room) throw new Error('Start a demo first.');
+            engine.act(room, 'p1', event, data);
+          }
+          broadcast(); ack({ok:true});
+        } catch (error) { ack({ok:false,error:error.message}); }
+      }
+    };
+    setInterval(() => { if (room && engine.tick(room)) broadcast(); }, 250);
+    // Save the exact dice and remaining time when refreshing or closing the file.
+    window.addEventListener('pagehide', save);
+    queueMicrotask(() => fire('connect'));
+    return transport;
+  };
+})();
+
+
+</script><script>
+/* global io */
+const socket=io(), app=document.querySelector('#app');
+const OFFLINE=window.LAST_TRAIN_OFFLINE===true;
+const KEY=OFFLINE?'last-train-offline-session':'last-train-session';
+function forgetSession(){try{sessionStorage.removeItem(KEY);}catch{}}
+let state=null, lanUrl='', offset=0, renderedPhase='';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const button=(text,event,extra='',cls='primary')=>`<button class="${cls}" data-event="${event}" ${extra}>${text}</button>`;
+const name=id=>esc(state?.players.find(p=>p.id===id)?.name||'Crew');
+const host=()=>state?.you===state?.hostId;
+const send=(event,data={})=>socket.emit(event,{phaseId:state?.phaseId,...data},r=>{if(r&&!r.ok)toast(r.error);});
+function toast(text){const t=document.querySelector('#toast');t.textContent=text;t.hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.hidden=true,4500);}
+function saved(){try{return JSON.parse(sessionStorage.getItem(KEY));}catch{return null;}}
+socket.on('connect',()=>{document.querySelector('#connection').textContent=OFFLINE?'● Offline ready':'● Connected';const s=saved();if(s)socket.emit('resume',s,r=>{if(!r.ok){forgetSession();state=null;render();toast('This room has ended. Start a new journey.');}});else render();});
+socket.on('disconnect',()=>{document.querySelector('#connection').textContent='○ Reconnecting…';});
+socket.on('joined',s=>{try{sessionStorage.setItem(KEY,JSON.stringify(s));}catch{}});
+socket.on('state',s=>{if(s.mode!=='heist'){sessionStorage.setItem('au-session',JSON.stringify(saved()));location.href='/classic/';return;}state=s;offset=s.serverNow-Date.now();render();});
+if(!OFFLINE)fetch('/info').then(r=>r.json()).then(d=>{lanUrl=['localhost','127.0.0.1','[::1]'].includes(location.hostname)?(d.urls[0]||location.origin):location.origin;if(state?.phase==='lobby')render();}).catch(()=>{});
+function home(){return `<section class="hero"><div><div class="eyebrow">AN ALTERNATE UNIVERSE ADVENTURE · 01</div><h1>The last train.<br><em>Your way out.</em></h1><p class="lede">One city. One last departure. Different secrets.<br>Gather your friends and find a way out—together.</p><div class="tags"><span>3–6 FRIENDS</span><span>20–25 MIN</span><span>ONE ROOM</span></div><div class="ticket"><h3>Your adventure starts here.</h3><label for="name">What should the crew call you?</label><input id="name" class="home-name" maxlength="20" placeholder="Your name" autocomplete="nickname"><div class="actions">${OFFLINE?button('Play solo with 3 bots →','demo'):button('Gather your crew →','create')+button('Try with bots','demo','','')}</div>${OFFLINE?'<p class="status-note">Offline edition · One player + three bots. Full three-chapter adventure, no installation. This file cannot host a shared room.</p>':`<div class="secondary-links"><button id="show-join">Have a room code? Join a crew</button><a href="/classic/">Play Classic ↗</a></div><div id="join-area" hidden><label for="code">Four-letter room code</label><input id="code" maxlength="4" placeholder="ABCD" autocapitalize="characters"><div class="actions">${button('Join the train','join')}</div></div>`}</div></div><div class="art"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNTAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkEgd2FybWx5IGxpdCB0cmFpbiB1bmRlciB0aGUgbW9vbiwgYmVzaWRlIHRoZSBjbG9ja3Rvd2VyIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3kiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzE1MjcyYyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzUwNjQ1YiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiZWFtIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlZmM3N2YiIHN0b3Atb3BhY2l0eT0iLjM1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWZjNzdmIiBzdG9wLW9wYWNpdHk9IjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHBhdGggZmlsbD0idXJsKCNza3kpIiBkPSJNMCAwaDQ4MHY1MDBIMHoiLz48Y2lyY2xlIGN4PSIzMjgiIGN5PSIxMTAiIHI9IjQ0IiBmaWxsPSIjZWVkNGExIi8+PGNpcmNsZSBjeD0iMzQ0IiBjeT0iOTUiIHI9IjQwIiBmaWxsPSIjMWMzMDMyIi8+CjxnIGZpbGw9IiNlNGJkNzkiPjxjaXJjbGUgY3g9Ijg1IiBjeT0iOTMiIHI9IjIiLz48Y2lyY2xlIGN4PSIyMDgiIGN5PSI0NyIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iNDEwIiBjeT0iMTU4IiByPSIyIi8+PGNpcmNsZSBjeD0iMTU5IiBjeT0iMTM5IiByPSIxIi8+PHBhdGggZD0ibTI1MyAxMTUgMiA2IDYgMi02IDItMiA2LTItNi02LTIgNi0yeiIvPjwvZz4KPGcgZmlsbD0iIzIyMzkzNiI+PHBhdGggZD0iTTAgMjg3di03M2gzMHYtMjZoMzh2OTloMTh2LTU0aDQwdjU0aDM5di04NWg1MHY4NWgzNHYtMjloNDR2MjloNzB2LTgxaDM0djgxaDgzdjIxM0gweiIvPjwvZz4KPHBhdGggZD0iTTU5IDMyMlYxNTdoMjF2LTM0aDE1bDEwLTMzIDEwIDMzaDE1djM0aDIxdjE2NXoiIGZpbGw9IiM0MDU1NGEiLz48cGF0aCBkPSJNNjYgMTY3aDc4djMxSDY2eiIgZmlsbD0iIzUxNjE0ZCIvPjxjaXJjbGUgY3g9IjEwNSIgY3k9IjE4MiIgcj0iMTciIGZpbGw9IiNlNmNiOTEiLz48cGF0aCBkPSJNMTA1IDE3MHYxMmw4IDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI2M2IzNiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTkwIDIyM2gyOXY0OUg5MHoiIGZpbGw9IiMyMjM5MzYiLz48cGF0aCBkPSJNOTUgMjI4aDd2MjVoLTd6bTEzIDBoNnYyNWgtNnoiIGZpbGw9IiNhNThlNWIiLz4KPHBhdGggZD0iTTAgMzQ0cTE5MC03NSA0ODAtMjV2MTgxSDB6IiBmaWxsPSIjMTcyYzJjIi8+PHBhdGggZD0iTTE4NSAzNjcgOTMgNTAwbTE5OS0xMzMgMTQzIDEzMyIgc3Ryb2tlPSIjYTI5YTc4IiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJtMTUxIDQwOCAxNzAgMG0tMTkyIDMwaDIyNW0tMjUxIDM1aDI4OSIgc3Ryb2tlPSIjNjA3MDY3IiBzdHJva2Utd2lkdGg9IjUiLz4KPHBhdGggZD0ibTE4MiAzNTMtNzMgMTQ3aDMwMmwtMTI2LTE0N3oiIGZpbGw9InVybCgjYmVhbSkiLz4KPHBhdGggZD0iTTE3OSAyMThxNTUtMjUgMTEwIDBsMTUgMTQzSDE2NnoiIGZpbGw9IiNkMGI3ODUiLz48cGF0aCBkPSJNMTc3IDIyNHE1NS0xOSAxMTAgMGw3IDk2SDE3MXoiIGZpbGw9IiMyZDQ3NDEiLz48cGF0aCBkPSJNMTgzIDIzN2g5Nmw1IDU0SDE3OHoiIGZpbGw9IiNlZGM3N2QiLz48cGF0aCBkPSJNMjI3IDIzNXY1N20tNDctMzBoMTAyIiBzdHJva2U9IiM2ZDc2NWIiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9Ik0xNzUgMzA2aDExNXY0MEgxNzV6IiBmaWxsPSIjYjlhMDcxIi8+PGNpcmNsZSBjeD0iMTg2IiBjeT0iMzMxIiByPSI5IiBmaWxsPSIjZmJlNGFjIi8+PGNpcmNsZSBjeD0iMjc4IiBjeT0iMzMxIiByPSI5IiBmaWxsPSIjZmJlNGFjIi8+PHBhdGggZD0iTTIxMCAzMTRoNDN2MjVoLTQzeiIgZmlsbD0iIzQ2NTg0YiIvPjxwYXRoIGQ9Ik0xNjMgMzUwaDE0M3YxN0gxNjN6IiBmaWxsPSIjNjU3NTY1Ii8+PHBhdGggZD0iTTE3OSAzNjdoMTV2MTJoLTE1em05MSAwaDE1djEyaC0xNXoiIGZpbGw9IiMwZTIwMjEiLz4KPGcgc3Ryb2tlPSIjOWI5Yjc2IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMzc4IDIyMnYxNTVtLTI3LTE1NWg1NCIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTM2NCAyMjVoMjh2MzhoLTI4eiIgZmlsbD0iI2U4YmQ3NCIvPjwvZz4KPHBhdGggZD0iTTAgNDIwcTM1LTE3IDY4IDBtMzMzIDMwcTQzLTIwIDc5IDAiIHN0cm9rZT0iIzMyNDk0MyIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo=" alt="A warmly lit train waiting beside a moonlit clocktower" style="width:100%;display:block"><div class="art-caption">DEPARTURE: BEFORE MIDNIGHT</div></div></section><section class="how">${[['01','Read your secret','You know something the others don’t.'],['02','Talk together','The best conversations happen off-screen.'],['03','Pick one action','Every person helps in every chapter.'],['04','Live with the result','Your choices travel with you.']].map(([n,t,d])=>`<div><span>${n}</span><h3>${t}</h3><p>${d}</p></div>`).join('')}</section>`;}
+function resources(){const hints={Fuel:'needed to start the train',Hope:'how ready the crew feels',Alert:'how close the guards are'};return `<section class="resource-bar" aria-label="Shared resources">${Object.entries(state.resources).map(([k,v])=>`<div class="resource"><div>${k} <strong>${v}<span class="small-text">/6</span></strong></div><small>${hints[k]}</small><div class="meter" aria-hidden="true">${Array.from({length:6},(_,i)=>`<i class="${i<v?'filled':''}"></i>`).join('')}</div></div>`).join('')}</section>`;}
+function secret(){return state.role?`<details class="card secret" id="private-card"><summary>Your private brief <small>Only you see this ▾</small></summary><p>${esc(state.role.clue)}</p><p class="wish">Your wish · ${esc(state.role.wish)}</p><p class="small-text">${esc(state.role.secret)}<br>You may share this aloud or show a friend. You don’t have to act a part.</p></details>`:'';}
+function crew(){return `<div class="chips">${state.players.map(p=>`<span class="chip"><span class="dot">${p.connected?'●':'○'}</span> ${esc(p.name)}${p.id===state.you?' · you':''}${p.id===state.hostId?' · host':''}${p.role?`<br><small>${esc(p.role)} · ${p.track} Bold +1</small>`:''}</span>`).join('')}</div>`;}
+function options(voting=false){return `<div class="options">${state.chapter.options.map(o=>voting?`<button class="option ${state.vote===o.id?'selected':''}" data-event="heistVote" data-choice="${o.id}" aria-pressed="${state.vote===o.id}"><strong>${o.id}${state.vote===o.id?' ✓':''}</strong><span>${o.text}</span><span>${o.hint}</span></button>`:`<div class="card option"><strong>${o.id}</strong><span>${o.text}</span><span>${o.hint}</span></div>`).join('')}</div>`;}
+function ready(text){return `<div class="actions">${button(state.ready?'Ready ✓':text,'heistReady',state.ready?'disabled':'')}</div>`;}
+function draft(){const a=state.draft||{track:'Cover',method:'Safe',focus:false};return `<section class="card"><div class="eyebrow">YOUR CONTRIBUTION · PRIVATE UNTIL REVEAL</div><h3>How will you help?</h3><p class="small-text">Each track needs ${state.q} contributions. Supply → Fuel +1 · Care → Hope +1 · Cover → Alert −1.</p><div class="track-grid">${['Supply','Care','Cover'].map(t=>`<button class="${a.track===t?'selected':''}" data-track="${t}" aria-pressed="${a.track===t}">${t}<small>${state.role.track===t?'Your specialty · Bold +1':'Open to everyone'}</small></button>`).join('')}</div><div class="actions">${['Safe','Bold'].map(m=>`<button class="${a.method===m?'selected':''}" data-method="${m}" aria-pressed="${a.method===m}">${m}<br><small>${m==='Safe'?'Guaranteed · +1 contribution':'Roll 4+ · +2 contribution'}</small></button>`).join('')}</div><label class="toggle"><input id="focus" type="checkbox" ${a.focus?'checked':''} ${a.method==='Safe'||!state.focus?'disabled':''}> Use Focus (+2 to Bold) · ${state.focus} left</label><p class="small-text">${a.method==='Bold'?`Roll d6 ${state.role.track===a.track?'+1 specialty ':''}${a.focus?'+2 Focus ':''}≥4. A failed roll adds 1 Alert.`:'Safe always contributes 1. No die or Focus required.'}</p><div class="status-note">${state.draft?'Draft saved.':'Default: Safe / Cover.'} Can edit until voting ends.</div></section>`;}
+function bill(b){if(!b)return '';return `<section class="card"><h3>Because you chose ${esc(b.choice)}…</h3><p>${esc(b.text)}</p><table class="ledger"><thead><tr><th>Resource ledger</th><th>Fuel</th><th>Hope</th><th>Alert</th></tr></thead><tbody><tr><td>Before this chapter</td>${['Fuel','Hope','Alert'].map(k=>`<td>${b.before[k]}</td>`).join('')}</tr>${b.lines.map(l=>`<tr><td>${esc(l.label)}</td>${['Fuel','Hope','Alert'].map(k=>`<td>${l.delta[k]>0?'+':''}${l.delta[k]||'—'}</td>`).join('')}</tr>`).join('')}<tr><td>After · bounded to 0–6</td>${['Fuel','Hope','Alert'].map(k=>`<td>${b.resources[k]}</td>`).join('')}</tr></tbody></table></section>`;}
+function history(){return state.history.length?`<details class="card history" id="history"><summary>The journey so far · ${state.history.length} chapter${state.history.length>1?'s':''}</summary>${state.history.map(b=>bill(b)).join('')}</details>`:'';}
+function screen(){const s=state;
+  if(s.phase==='lobby')return `<div class="eyebrow">YOUR BOARDING PASS</div><h2>Leave together.</h2><p>Gather ${s.demo?'your bot crew':'3–6 friends'}. Each person needs a phone and a different piece of the story.</p><div class="card"><span class="eyebrow">${OFFLINE?'LOCAL DEMO · NOT A JOIN CODE':'ROOM CODE'}</span><div class="code">${s.code}</div><p class="small-text">${s.demo?'Demo crew · bots share scripted clues and follow predictable actions.':`Open <strong>${esc(lanUrl||location.origin)}</strong> on each phone, then enter this code.`}</p>${crew()}</div><div class="status-note">Read your secret / Talk together / Pick one action / Live with the result</div>${host()?button('All aboard →','heistStart',s.players.filter(p=>p.connected).length<3?'disabled':'','primary full'):'<p>Waiting for the host to begin.</p>'}`;
+  if(s.phase==='casting')return `<div class="eyebrow">CAST THE CREW · 3 QUICK QUESTIONS</div><h2>Who’s who tonight?</h2><p>Pick someone for each question. Self-votes welcome. These are suggestions, not personality labels.</p>${s.questions.map((q,i)=>`<section class="card cast-question"><h3>${i+1}. ${q}</h3><div class="chips">${s.players.map(p=>`<button class="${s.ballot[i]===p.id?'selected':''}" data-event="heistCastVote" data-question="${i}" data-player="${p.id}" aria-pressed="${s.ballot[i]===p.id}">${esc(p.name)}</button>`).join('')}</div></section>`).join('')}<p class="status-note">Answers stay private. Casting closes when the timer ends.${s.demo?' Demo casting: 12 seconds.':''}</p>`;
+  if(s.phase==='roles')return `<div class="eyebrow">MEET YOUR OTHER SELF</div><h2>You’re the ${s.role.name}.</h2><p>${s.role.track} Bold +1 · You can still choose any track.</p>${secret()}${crew()}<div class="card"><h3>Want to trade places?</h3><p class="small-text">One mutual swap per person. The whole role, secret and wish move together. Invitations expire after 10 seconds.</p>${s.swaps.map(x=>`<p>${x.to===s.you?`${name(x.from)} invited you to swap.`:`Waiting for ${name(x.to)}.`}</p>${x.to===s.you?button('Accept swap','heistSwapAccept',`data-player="${x.from}"`):''}`).join('')}<div class="chips">${s.canSwap&&!s.swaps.length?s.players.filter(p=>p.id!==s.you).map(p=>button(`Ask ${esc(p.name)}`,'heistSwapRequest',`data-player="${p.id}"`,'small')).join(''):''}</div></div>${ready('My role is ready →')}`;
+  if(s.phase==='waiting')return `<h2>Keep the crew together.</h2><p>Fewer than three players are connected. The next chapter will wait. Rejoin on the original phone to keep your role.</p>${crew()}${host()?`<div class="actions">${button('End session early','heistEndEarly','','')}</div>`:''}`;
+  if(s.phase==='ended')return `<h2>Session ended early.</h2><p>The adventure was not completed. You can gather the crew and try again.</p>${history()}${button('Back to the station','leave')}`;
+  if(s.phase==='ending')return `<div class="ending"><div class="seal">✦</div><div class="eyebrow">THE END OF THIS JOURNEY</div><h2>${s.ending.title}</h2><p class="scene">${esc(s.ending.text)}</p><p class="small-text">${s.history.at(-1).choice}: Fuel needed ${s.ending.threshold}. Clean escape: Hope ≥2, Alert ≤4.</p></div><section class="card"><div class="eyebrow">YOUR PERSONAL SOUVENIR · PRIVATE</div><h3>${s.wish.achieved?'✦ Wish fulfilled':'A wish for another journey'}</h3><p>${esc(s.wish.text)}</p><p class="small-text">A memory, not a score. Your wish never changes the crew’s outcome.</p>${button(s.wish.public?'Wish shared ✓':'Reveal my wish','heistRevealWish',s.wish.public?'disabled':'','')}${s.publicWishes.map(w=>`<div class="row"><span>${name(w.playerId)} · ${esc(w.text)}</span><span>${w.achieved?'✦':'○'}</span></div>`).join('')}</section><h3>Your part in the story</h3>${s.memories.map((m,i)=>`<details class="card history"><summary>Chapter ${i+1} · ${m.action.track} / ${m.action.method}</summary><p>You knew: ${esc(m.clue)}</p><p>You did: ${m.action.track}, ${m.action.method}${m.action.auto?' (Auto)':''}. You contributed ${m.action.contribution}.</p><p>Together: ${m.totals[m.action.track]}/${m.q} on ${m.action.track}. ${m.totals[m.action.track]>=m.q?'The track benefit activated.':'The track threshold was not reached.'}</p></details>`).join('')}${history()}${host()?button('Download anonymous event log','export','','full'):''}<div class="card"><h3>Before you go…</h3><p>When did you need a friend’s information? Which choice changed the outcome? Would you play another role?</p></div>${button('A new journey →','leave','','primary full')}`;
+  let intro=`<div class="chapter-nav">${[0,1,2].map(i=>`<span class="${i<=s.chapterIndex?'active':''}"></span>`).join('')}</div><div class="eyebrow">CHAPTER 0${s.chapterIndex+1} / 03 · ${s.chapter.subtitle.toUpperCase()}</div><h2>${s.chapter.title}</h2>`;
+  if(s.phase==='chapter_end')return intro+bill(s.bill)+(host()?button('Next chapter →','heistAdvance','','primary full'):'<p>Waiting for the host to continue.</p>');
+  if(s.phase==='resolve'){
+    if(s.showTotals)return intro+`<div class="card"><h3>Every contribution counts.</h3>${Object.entries(s.totals).map(([t,n])=>`<div class="row"><span>${t}</span><strong>${n}/${s.q} ${n>=s.q?'✓':''}</strong></div>`).join('')}<p class="small-text">Each track can trigger once. Next: the crew’s decision and its consequences.</p></div>${advance('See the consequences →')}`;
+    const r=s.reveals.at(-1);return intro+`<section class="card reveal"><div class="eyebrow">CREW REVEAL ${s.reveals.length} / ${s.players.length}</div><h2>${name(r.playerId)}</h2><p>${r.track} · ${r.method}${r.auto?' · Auto':''}${r.focus?' · Focus used':''}</p>${r.roll!==null?`<div class="die">${r.roll}</div><p>d6 ${r.roll} + ${r.modifier} modifier = ${r.roll+r.modifier}<br>Target ≥${r.threshold}</p>`:'<div class="big-number">✓</div><p>Safe action · automatic success</p>'}<h3 class="${r.success?'success':'error'}">${r.contribution} contribution${r.contribution!==1?'s':''}${r.alert?' · Alert +1':''}</h3><details class="history"><summary>Result details</summary><p class="small-text">${r.method==='Bold'?`Raw die: ${r.roll}. Specialty: ${s.players.find(p=>p.id===r.playerId).track===r.track?'+1':'0'}. Focus: ${r.focus?'+2':'0'}. Success threshold: 4.`:'Safe actions contribute 1 without rolling.'} This result is saved. Resources settle once, after every reveal.</p></details></section>${advance(s.reveals.length===s.players.length?'See track totals →':'Next crew member →')}`;
+  }
+  const previous=s.history.at(-1);intro+=previous?`<p class="status-note">Previously: ${previous.choice}. Fuel ${previous.before.Fuel} → ${previous.resources.Fuel}, Hope ${previous.before.Hope} → ${previous.resources.Hope}, Alert ${previous.before.Alert} → ${previous.resources.Alert}.${s.flags.route?` Route: ${s.flags.route}.`:''}</p>`:'';
+  intro+=`<p class="scene">${s.chapter.scene}</p><p class="npc">${s.chapter.npc}</p>${secret()}`;
+  if(s.phase==='briefing')return intro+`<div class="status-note">Read your clue. What might your friends need to know? Take at least 10 seconds.</div>${ready('I’ve read my clue →')}`;
+  const botClues=s.botClues.map(b=>`<div class="bot-note"><strong>${name(b.playerId)} · SCRIPTED CLUE</strong><p>“${esc(b.text)}”</p></div>`).join('');
+  if(s.phase==='planning')return intro+`<h3>Put your phones down. Talk it through.</h3><p class="small-text">Who can supply, care and cover? What do your clues change?</p>${botClues}${options()}${draft()}${ready('Ready to vote →')}`;
+  return intro+`<h3>Choose together. Vote privately.</h3><p class="small-text">Captain: ${name(s.captainId)}. A tie follows their submitted vote; otherwise the earliest valid tied vote. No votes: ${['Battery','Tunnel','Service'][s.chapterIndex]}.</p>${options(true)}<p class="status-note">${s.vote?`Your vote: ${s.vote}. You can change it until time runs out.`:'Choose one route. Votes stay hidden until settlement.'}${s.demo?' Demo voting: 8 seconds.':''}</p><details class="history" id="action-edit"><summary>Edit your personal action</summary>${draft()}</details>`;
+}
+function advance(label){return host()?button(label,'heistAdvance','data-delay="true"','primary full'):'<p class="status-note">The host will reveal the next card.</p>';}
+function render(){const phaseKey=state ? `${state.phase}:${state.chapterIndex}:${state.phaseId}` : 'home';const changed=phaseKey!==renderedPhase;renderedPhase=phaseKey;const open=[...app.querySelectorAll('details[open][id]')].map(e=>e.id);const oldFocus=document.activeElement?.id;app.innerHTML=state?`<div class="game"><div class="topline"><span>THE LAST TRAIN · <strong>${state.code}</strong>${state.demo?' · BOT DEMO':''}</span><span id="timer"></span></div>${!['lobby','casting','roles'].includes(state.phase)?resources():''}${screen()}</div>`:home();open.forEach(id=>{const e=document.getElementById(id);if(e)e.open=true;});if(oldFocus&&!changed)document.getElementById(oldFocus)?.focus();if(changed)window.scrollTo({top:0,behavior:'instant'});updateClock();}
+function updateClock(){if(!state)return;const t=document.querySelector('#timer');const now=Date.now()+offset;if(t)t.textContent=state.paused?'Paused · waiting for crew':state.deadlineAt?`${Math.max(0,Math.ceil((state.deadlineAt-now)/1000))}s · ${state.phase}`:state.phase.replace('_',' ');app.querySelectorAll('[data-delay]').forEach(b=>{const left=Math.ceil((state.startedAt+4000-now)/1000);b.disabled=left>0;b.title=left>0?`Available in ${left}s`:'';});}
+setInterval(updateClock,250);
+function changeAction(patch){send('heistSetAction',{...(state.draft||{track:'Cover',method:'Safe',focus:false}),...patch});}
+app.addEventListener('change',e=>{if(e.target.id==='focus')changeAction({focus:e.target.checked});});
+app.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b||b.disabled)return;
+  if(b.id==='show-join'){document.querySelector('#join-area').hidden=false;document.querySelector('#code').focus();return;}
+  if(b.dataset.track){changeAction({track:b.dataset.track});return;}
+  if(b.dataset.method){changeAction({method:b.dataset.method,...(b.dataset.method==='Safe'?{focus:false}:{})});return;}
+  const ev=b.dataset.event;if(!ev)return;
+  if(['create','demo','join'].includes(ev)){
+    const input=document.querySelector('#name'),n=input.value.trim();if(!n){input.focus();toast('Tell us your name first.');return;}
+    if(ev==='join')send('join',{name:n,code:document.querySelector('#code').value});else send('create',{name:n,mode:'heist',demo:ev==='demo'});return;
+  }
+  if(ev==='export'){const url=URL.createObjectURL(new Blob([JSON.stringify(state.researchEvents,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='last-train-events.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);return;}
+  if(ev==='leave'){forgetSession();if(OFFLINE)location.reload();else location.href='/';return;}
+  const data={};if(b.dataset.player)data.playerId=b.dataset.player;if(b.dataset.question!==undefined)data.question=Number(b.dataset.question);if(b.dataset.choice)data.choice=b.dataset.choice;send(ev,data);
+});
+render();
+
+</script></body></html>

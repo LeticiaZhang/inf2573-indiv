@@ -9,7 +9,9 @@
     "dev": "node --watch server/index.js",
     "simulate": "node scripts/simulate.js",
     "test": "node --test test/*.test.js",
-    "simulate:heist": "node scripts/simulate-heist.js"
+    "simulate:heist": "node scripts/simulate-heist.js",
+    "build:offline": "node scripts/build-offline.js",
+    "launch": "node scripts/launch.js"
   },
   "engines": {
     "node": ">=18"

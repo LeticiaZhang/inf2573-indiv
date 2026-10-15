@@ -1,0 +1,19 @@
+# Optional public multiplayer service. Deploy once from the README button.
+# Single instance: game rooms live in memory. Restarting the service ends rooms.
+services:
+  - type: web
+    name: inf2573-last-train
+    runtime: node
+    plan: free
+    rootDir: Pretotypes/the-last-train
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GM_MODE
+        value: mock
+      - key: NODE_VERSION
+        value: "24"

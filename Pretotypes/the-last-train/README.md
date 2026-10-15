@@ -2,7 +2,24 @@
 
 一个可运行的线下朋友角色扮演实验：3–6 人、每人一部手机，在同一个房间里用不同的私人线索讨论同一趟末班列车。英文游戏界面，中文实验说明。完整三章，无需 API key。
 
-## 开始体验
+## 最简单的打开方式
+
+**只想马上体验 / 给老师展示：**
+
+1. [下载零安装演示包](https://github.com/LeticiaZhang/inf2573-indiv/raw/refs/heads/main/Pretotypes/the-last-train/downloads/The-Last-Train-Offline.zip)。
+2. 解压，双击 **`Play-The-Last-Train.html`**，用浏览器打开。
+3. 输入名字，点击 **Play solo with 3 bots**。
+
+也可以[只下载这个 HTML 文件](https://github.com/LeticiaZhang/inf2573-indiv/raw/refs/heads/main/Pretotypes/the-last-train/Play-The-Last-Train.html)。不需要安装软件、运行命令、API key 或联网。文件包含全部图片与逻辑；**它是一个真人加三个 bot 的完整三章演示，不能让其他手机加入同一局，也不包含 Classic**。刷新会尽量恢复本标签页的进度；如果浏览器禁止本地文件储存，则刷新后需重新开始。
+
+**想让朋友各用自己的手机一起玩：**
+
+- 本机主持：下载仓库 ZIP 并解压。在本目录双击 Mac 的 **`Start-Multiplayer.command`** 或 Windows 的 **`Start-Multiplayer.cmd`**。需要先安装一次 [Node.js LTS](https://nodejs.org/)；启动器第一次会联网准备依赖，之后自动启动服务器并打开浏览器。主持电脑需保持运行，朋友连接同一 Wi-Fi 并打开屏幕提示的地址。系统若阻止打开脚本，可使用下方手动运行步骤。
+- 在线链接：点击 [Deploy to Render](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2FLeticiaZhang%2Finf2573-indiv)，首次登录自己的 Render 账户并确认部署。部署成功后，把服务生成的 **`https://…onrender.com`** 地址发给朋友，他们只需点击链接，无需安装或同一 Wi-Fi。**当前已提供部署配置，还没有在你的 Render 账户中创建服务；部署按钮本身不是游戏链接。**
+
+多人服务使用仓库根目录 `render.yaml`，默认 free 方案、mock、一个实例、关闭自动部署；确认时以账户实际可用方案为准。免费服务可能休眠，首次打开需等待唤醒；重启会清空内存房间。参考 [Render 快速部署说明](https://render.com/docs/deploy-to-render) 与 [免费服务限制](https://render.com/docs/free)。
+
+## 多人版手动运行
 
 需要 Node.js 18+。在本文件所在目录执行：
 
@@ -57,6 +74,7 @@ npm start
 ## 验证
 
 ```sh
+npm run build:offline    # 更新源代码后重新生成独立 HTML
 npm test                 # 规则和状态机测试，不实际等待计时器
 npm run simulate:heist   # 3 / 4 / 6 人完整三章，逐章账单
 npm run simulate         # 原 Classic 的 4 人 Socket.IO 完整一局
@@ -87,4 +105,4 @@ node scripts/socket-smoke.js
 
 ## 来源
 
-基于 `AidanBlackmore/INF2573-Group-4` 当前工作区的 Node / Express / Socket.IO 原型扩展，保留其 Classic 实现与配置。新模式依据用户提供的 `design/02-roleplay-heist-claude-brief.md`。列车插画为本次创建的本地 SVG，不依赖外链素材或字体。AI 辅助实现与测试：OpenAI Codex。作品放入个人仓库 `inf2573-indiv/Pretotypes/the-last-train`，未修改小组仓库原有游戏代码。
+基于 `AidanBlackmore/INF2573-Group-4` 当前工作区的 Node / Express / Socket.IO 原型扩展，保留其 Classic 实现与配置。已参考上游 main 的 README、入口和依赖配置；上游也需要 Node 服务，未提供独立桌面安装包。新模式依据用户提供的 `design/02-roleplay-heist-claude-brief.md`。列车插画为本次创建的本地 SVG，不依赖外链素材或字体。AI 辅助实现与测试：OpenAI Codex。作品放入个人仓库 `inf2573-indiv/Pretotypes/the-last-train`，未修改小组仓库原有游戏代码。
