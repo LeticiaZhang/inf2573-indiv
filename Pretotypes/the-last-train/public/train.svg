@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 500" role="img" aria-label="A warmly lit train under the moon, beside the clocktower">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#15272c"/><stop offset="1" stop-color="#50645b"/></linearGradient><linearGradient id="beam" x2="0" y2="1"><stop stop-color="#efc77f" stop-opacity=".35"/><stop offset="1" stop-color="#efc77f" stop-opacity="0"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h480v500H0z"/><circle cx="328" cy="110" r="44" fill="#eed4a1"/><circle cx="344" cy="95" r="40" fill="#1c3032"/>
+<g fill="#e4bd79"><circle cx="85" cy="93" r="2"/><circle cx="208" cy="47" r="1.5"/><circle cx="410" cy="158" r="2"/><circle cx="159" cy="139" r="1"/><path d="m253 115 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g>
+<g fill="#223936"><path d="M0 287v-73h30v-26h38v99h18v-54h40v54h39v-85h50v85h34v-29h44v29h70v-81h34v81h83v213H0z"/></g>
+<path d="M59 322V157h21v-34h15l10-33 10 33h15v34h21v165z" fill="#40554a"/><path d="M66 167h78v31H66z" fill="#51614d"/><circle cx="105" cy="182" r="17" fill="#e6cb91"/><path d="M105 170v12l8 5" fill="none" stroke="#263b36" stroke-width="2"/><path d="M90 223h29v49H90z" fill="#223936"/><path d="M95 228h7v25h-7zm13 0h6v25h-6z" fill="#a58e5b"/>
+<path d="M0 344q190-75 480-25v181H0z" fill="#172c2c"/><path d="M185 367 93 500m199-133 143 133" stroke="#a29a78" stroke-width="4"/><path d="m151 408 170 0m-192 30h225m-251 35h289" stroke="#607067" stroke-width="5"/>
+<path d="m182 353-73 147h302l-126-147z" fill="url(#beam)"/>
+<path d="M179 218q55-25 110 0l15 143H166z" fill="#d0b785"/><path d="M177 224q55-19 110 0l7 96H171z" fill="#2d4741"/><path d="M183 237h96l5 54H178z" fill="#edc77d"/><path d="M227 235v57m-47-30h102" stroke="#6d765b" stroke-width="5"/><path d="M175 306h115v40H175z" fill="#b9a071"/><circle cx="186" cy="331" r="9" fill="#fbe4ac"/><circle cx="278" cy="331" r="9" fill="#fbe4ac"/><path d="M210 314h43v25h-43z" fill="#46584b"/><path d="M163 350h143v17H163z" fill="#657565"/><path d="M179 367h15v12h-15zm91 0h15v12h-15z" fill="#0e2021"/>
+<g stroke="#9b9b76" fill="none"><path d="M378 222v155m-27-155h54" stroke-width="4"/><path d="M364 225h28v38h-28z" fill="#e8bd74"/></g>
+<path d="M0 420q35-17 68 0m333 30q43-20 79 0" stroke="#324943" stroke-width="8" fill="none"/>
+</svg>

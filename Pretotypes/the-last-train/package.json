@@ -1,0 +1,27 @@
+{
+  "name": "the-last-train-pretotype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Last Train \u2014 a co-located social roleplay pretotype, with the original Classic mode",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "simulate": "node scripts/simulate.js",
+    "test": "node --test test/*.test.js",
+    "simulate:heist": "node scripts/simulate-heist.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.3"
+  }
+}
